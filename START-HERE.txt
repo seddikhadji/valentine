@@ -1,0 +1,108 @@
+═══════════════════════════════════════════════════════════════
+    💝 SURPRISE VALENTINE POUR MA 224 💝
+═══════════════════════════════════════════════════════════════
+
+Félicitations ! Ton site est PRÊT ! 🎉
+
+📂 CONTENU DU DOSSIER:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+FICHIERS DU SITE (à uploader sur GitHub):
+  ├─ index.html         → Page principale
+  ├─ style.css          → Tout le design
+  ├─ script.js          → Toute la magie interactive
+  ├─ puzzle-image.jpg   → ⚠️ À REMPLACER par votre vraie photo !
+  └─ .gitignore         → Pour GitHub
+
+GUIDES (à lire):
+  ├─ GUIDE-RAPIDE.md          → ⚡ START ICI ! (5 min chrono)
+  ├─ README.md                → Guide complet détaillé
+  ├─ APERCU-VISUEL.md         → Pour voir ce qu'elle verra
+  └─ CHECKLIST-AVANT-ENVOI.md → À vérifier avant d'envoyer
+
+
+🚀 PAR OÙ COMMENCER ?
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. ➡️  Ouvre "GUIDE-RAPIDE.md"
+2. ➡️  Suis les 5 étapes (5 minutes max)
+3. ➡️  Remplace l'image du puzzle par votre vraie photo
+4. ➡️  Teste le site avec le code "MYLOVE224"
+5. ➡️  Lis la "CHECKLIST-AVANT-ENVOI.md"
+6. ➡️  Envoie le lien avec les fleurs ! 🌹
+
+
+⚡ VERSION ULTRA RAPIDE (3 étapes):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Crée un compte sur GitHub.com
+2. Upload ces 4 fichiers dans un nouveau repo:
+   - index.html
+   - style.css  
+   - script.js
+   - puzzle-image.jpg (ta vraie photo !)
+3. Active "GitHub Pages" dans Settings
+   → Tu obtiens ton lien !
+
+
+📝 CODE SECRET À METTRE DANS LA CARTE:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+    MYLOVE224
+
+
+💡 BESOIN D'AIDE ?
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+→ Tout est expliqué dans les guides !
+→ Chaque fichier .md contient des instructions claires
+→ Si problème: lis le README.md section "Aide"
+
+
+✨ CE QUI VA SE PASSER:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Elle recevra les fleurs 🌹
+  ↓
+Elle verra la carte avec le lien et le code 💌
+  ↓
+Elle ira sur le site 🌐
+  ↓
+Elle entrera le code "MYLOVE224" 🔐
+  ↓
+Elle fera le puzzle avec votre photo 🧩
+  ↓
+Elle verra votre timeline d'amour 💫
+  ↓
+Elle lira tes messages touchants 💌
+  ↓
+La GRANDE QUESTION apparaîtra ! 💝
+  ↓
+Le bouton "Non" s'échappera (trop drôle !) 😂
+  ↓
+Elle cliquera sur "OUI" ! 🎉
+  ↓
+Confettis + Ton message d'amour + Compte à rebours 💕
+
+
+═══════════════════════════════════════════════════════════════
+
+        🎯 OBJECTIF: Mettre le site en ligne
+
+        ⏱️  TEMPS: 5-10 minutes maximum
+
+        💰 COÛT: 100% GRATUIT
+
+        ♾️  DURÉE: En ligne pour TOUJOURS
+
+═══════════════════════════════════════════════════════════════
+
+
+                🚀 COMMENCE MAINTENANT !
+            Ouvre "GUIDE-RAPIDE.md" et c'est parti !
+
+
+═══════════════════════════════════════════════════════════════
+        Créé avec ❤️  pour ta future femme
+              Mariage: 30 Juillet 2026 💒
+═══════════════════════════════════════════════════════════════

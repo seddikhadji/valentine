@@ -1,0 +1,637 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+    color: #fff;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ============ PARTICULES ============ */
+#particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* ============ CONTAINER ============ */
+.container {
+    position: relative;
+    z-index: 10;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ============ STEPS ============ */
+.step {
+    display: none;
+    animation: fadeIn 0.8s ease-in;
+}
+
+.step.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============ ÉTAPE 1: LOGIN ============ */
+.heart-icon {
+    font-size: 80px;
+    animation: heartbeat 2s ease-in-out infinite;
+    margin-bottom: 20px;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    25% { transform: scale(1.1); }
+    50% { transform: scale(1); }
+    75% { transform: scale(1.15); }
+}
+
+.glowing-text {
+    font-size: 48px;
+    text-align: center;
+    margin: 20px 0;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8),
+                 0 0 40px rgba(255, 255, 255, 0.6);
+    animation: glow 2s ease-in-out infinite;
+}
+
+@keyframes glow {
+    0%, 100% { text-shadow: 0 0 20px rgba(255, 255, 255, 0.8); }
+    50% { text-shadow: 0 0 30px rgba(255, 255, 255, 1), 0 0 50px rgba(255, 182, 193, 0.8); }
+}
+
+.subtitle {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 400px;
+}
+
+#secret-code {
+    padding: 15px 20px;
+    font-size: 18px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    color: #fff;
+    text-align: center;
+    outline: none;
+    transition: all 0.3s;
+}
+
+#secret-code::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+#secret-code:focus {
+    border-color: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+.btn-primary {
+    padding: 15px 40px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 10px 30px rgba(245, 87, 108, 0.4);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 15px 40px rgba(245, 87, 108, 0.6);
+}
+
+.error-msg {
+    color: #ff6b6b;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+    min-height: 20px;
+}
+
+/* ============ ÉTAPE 2: PUZZLE ============ */
+.section-title {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.instruction {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.puzzle-container {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.puzzle-board {
+    display: grid;
+    grid-template-columns: repeat(3, 120px);
+    grid-template-rows: repeat(3, 120px);
+    gap: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+.puzzle-pieces {
+    display: grid;
+    grid-template-columns: repeat(3, 120px);
+    grid-template-rows: repeat(3, 120px);
+    gap: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+.puzzle-cell {
+    width: 120px;
+    height: 120px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px dashed rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+
+.puzzle-cell.drop-active {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.8);
+    transform: scale(1.05);
+}
+
+.puzzle-piece {
+    width: 120px;
+    height: 120px;
+    background-size: 360px 360px;
+    border-radius: 8px;
+    cursor: move;
+    transition: all 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.puzzle-piece:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+.puzzle-piece.dragging {
+    opacity: 0.5;
+    transform: rotate(5deg);
+}
+
+.puzzle-piece.placed {
+    cursor: default;
+    animation: placeSuccess 0.5s ease;
+}
+
+@keyframes placeSuccess {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+.success-animation {
+    font-size: 36px;
+    text-align: center;
+    margin: 30px 0;
+    animation: successPulse 1s ease infinite;
+}
+
+@keyframes successPulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.2); opacity: 0.8; }
+}
+
+.hidden {
+    display: none;
+}
+
+/* ============ ÉTAPE 3: TIMELINE ============ */
+.timeline {
+    position: relative;
+    max-width: 600px;
+    margin: 40px auto;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    opacity: 0;
+    animation: slideIn 0.6s ease forwards;
+}
+
+.timeline-item:nth-child(1) { animation-delay: 0.1s; }
+.timeline-item:nth-child(2) { animation-delay: 0.3s; }
+.timeline-item:nth-child(3) { animation-delay: 0.5s; }
+.timeline-item:nth-child(4) { animation-delay: 0.7s; }
+.timeline-item:nth-child(5) { animation-delay: 0.9s; }
+.timeline-item:nth-child(6) { animation-delay: 1.1s; }
+.timeline-item:nth-child(7) { animation-delay: 1.3s; }
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.timeline-icon {
+    font-size: 40px;
+    margin-right: 20px;
+    min-width: 50px;
+    text-align: center;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.timeline-content {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    flex: 1;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-date {
+    font-size: 14px;
+    opacity: 0.8;
+    margin-bottom: 5px;
+}
+
+.timeline-text {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* ============ ÉTAPE 4: MESSAGES ============ */
+.messages-container {
+    max-width: 700px;
+    margin: 40px auto;
+}
+
+.message-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    animation: messageAppear 0.8s ease forwards;
+    position: relative;
+    overflow: hidden;
+}
+
+.message-card::before {
+    content: '"';
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    font-size: 120px;
+    opacity: 0.1;
+    font-family: Georgia, serif;
+}
+
+@keyframes messageAppear {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.message-text {
+    font-size: 20px;
+    line-height: 1.8;
+    text-align: center;
+    font-style: italic;
+    position: relative;
+    z-index: 1;
+}
+
+/* ============ ÉTAPE 5: QUESTION ============ */
+.question-container {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.big-question {
+    font-size: 48px;
+    margin-bottom: 15px;
+    animation: questionGlow 2s ease-in-out infinite;
+}
+
+@keyframes questionGlow {
+    0%, 100% {
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    }
+    50% {
+        text-shadow: 0 0 40px rgba(255, 255, 255, 0.8),
+                     0 0 60px rgba(255, 182, 193, 0.6);
+    }
+}
+
+.question-subtitle {
+    font-size: 22px;
+    margin-bottom: 50px;
+    opacity: 0.9;
+}
+
+.buttons-container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 30px;
+    position: relative;
+    min-height: 80px;
+}
+
+.btn-yes, .btn-no {
+    padding: 20px 60px;
+    font-size: 24px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.btn-yes {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: #fff;
+}
+
+.btn-yes:hover {
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 15px 40px rgba(245, 87, 108, 0.6);
+}
+
+.btn-no {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    color: #fff;
+    position: absolute;
+    transition: all 0.2s ease;
+}
+
+.escape-message {
+    font-size: 18px;
+    min-height: 30px;
+    font-style: italic;
+    opacity: 0.8;
+    animation: messageFade 0.5s ease;
+}
+
+@keyframes messageFade {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 0.8; transform: translateY(0); }
+}
+
+/* ============ ÉTAPE 6: FINAL ============ */
+.fireworks {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 5;
+}
+
+.celebration-title {
+    font-size: 72px;
+    text-align: center;
+    margin-bottom: 40px;
+    animation: celebrate 1s ease infinite;
+}
+
+@keyframes celebrate {
+    0%, 100% { transform: scale(1) rotate(-5deg); }
+    50% { transform: scale(1.1) rotate(5deg); }
+}
+
+.love-letter {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 800px;
+    margin: 0 auto 50px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.love-text {
+    font-size: 18px;
+    line-height: 1.9;
+    margin-bottom: 25px;
+    text-align: justify;
+}
+
+.love-signature {
+    font-size: 20px;
+    text-align: right;
+    font-style: italic;
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+.countdown-section {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.countdown-title {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+.countdown-item {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 25px;
+    border-radius: 15px;
+    min-width: 120px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.countdown-number {
+    font-size: 48px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.countdown-label {
+    font-size: 16px;
+    opacity: 0.9;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.countdown-subtitle {
+    font-size: 20px;
+    margin-top: 20px;
+    opacity: 0.9;
+}
+
+.final-hearts {
+    font-size: 48px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.final-hearts span {
+    display: inline-block;
+    margin: 0 10px;
+    animation: heartFloat 2s ease-in-out infinite;
+}
+
+.final-hearts span:nth-child(1) { animation-delay: 0s; }
+.final-hearts span:nth-child(2) { animation-delay: 0.2s; }
+.final-hearts span:nth-child(3) { animation-delay: 0.4s; }
+.final-hearts span:nth-child(4) { animation-delay: 0.6s; }
+.final-hearts span:nth-child(5) { animation-delay: 0.8s; }
+
+@keyframes heartFloat {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-20px) scale(1.2); }
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 768px) {
+    .glowing-text { font-size: 36px; }
+    .section-title { font-size: 28px; }
+    .big-question { font-size: 32px; }
+    .celebration-title { font-size: 48px; }
+    
+    .puzzle-board, .puzzle-pieces {
+        grid-template-columns: repeat(3, 90px);
+        grid-template-rows: repeat(3, 90px);
+    }
+    
+    .puzzle-cell, .puzzle-piece {
+        width: 90px;
+        height: 90px;
+    }
+    
+    .puzzle-piece {
+        background-size: 270px 270px;
+    }
+    
+    .buttons-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .btn-no {
+        position: relative;
+    }
+    
+    .love-letter {
+        padding: 25px;
+    }
+    
+    .love-text {
+        font-size: 16px;
+        text-align: left;
+    }
+    
+    .countdown {
+        gap: 15px;
+    }
+    
+    .countdown-item {
+        min-width: 80px;
+        padding: 15px;
+    }
+    
+    .countdown-number {
+        font-size: 32px;
+    }
+}

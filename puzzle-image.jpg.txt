@@ -1,0 +1,11 @@
+INSTRUCTIONS POUR L'IMAGE DU PUZZLE:
+=====================================
+
+1. Trouve une belle photo de vous deux (format carré de préférence)
+2. Renomme-la en "puzzle-image.jpg"
+3. Upload-la dans ton repo GitHub à la racine
+4. L'image sera automatiquement découpée en 9 pièces par le code
+
+Dimensions recommandées: 360x360 pixels (ou tout format carré)
+
+Pour l'instant, je crée une image temporaire colorée pour tester.

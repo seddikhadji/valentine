@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pour ma 224 💝</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Particules de fond -->
+    <div id="particles"></div>
+    
+    <!-- ÉTAPE 1: Code Secret -->
+    <div id="step-login" class="step active">
+        <div class="container">
+            <div class="heart-icon">💝</div>
+            <h1 class="glowing-text">Pour Toi, Ma 224</h1>
+            <p class="subtitle">Un voyage spécial t'attend...</p>
+            <div class="input-group">
+                <input type="text" id="secret-code" placeholder="Entre le code secret..." maxlength="20">
+                <button onclick="checkCode()" class="btn-primary">Déverrouiller 🔓</button>
+            </div>
+            <p id="error-msg" class="error-msg"></p>
+        </div>
+    </div>
+
+    <!-- ÉTAPE 2: Puzzle -->
+    <div id="step-puzzle" class="step">
+        <div class="container">
+            <h2 class="section-title">Reconstitue Notre Premier Moment 🧩</h2>
+            <p class="instruction">Glisse les pièces pour recréer notre photo...</p>
+            
+            <div class="puzzle-container">
+                <div id="puzzle-board" class="puzzle-board"></div>
+                <div id="puzzle-pieces" class="puzzle-pieces"></div>
+            </div>
+            
+            <div id="puzzle-complete" class="hidden">
+                <div class="success-animation">✨ Magnifique ! ✨</div>
+                <button onclick="nextStep(3)" class="btn-primary">Continuer →</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ÉTAPE 3: Timeline -->
+    <div id="step-timeline" class="step">
+        <div class="container">
+            <h2 class="section-title">Notre Histoire 💫</h2>
+            <div class="timeline" id="timeline"></div>
+            <button onclick="nextStep(4)" class="btn-primary">Suivant →</button>
+        </div>
+    </div>
+
+    <!-- ÉTAPE 4: Messages d'Amour -->
+    <div id="step-messages" class="step">
+        <div class="container">
+            <h2 class="section-title">Ce Que Je Veux Que Tu Saches 💌</h2>
+            <div class="messages-container" id="messages-container"></div>
+            <button onclick="nextStep(5)" class="btn-primary" id="btn-next-messages" style="display: none;">Continuer →</button>
+        </div>
+    </div>
+
+    <!-- ÉTAPE 5: La Question Valentine -->
+    <div id="step-question" class="step">
+        <div class="container">
+            <div class="question-container">
+                <h2 class="big-question">Veux-tu être ma Valentine ? 💝</h2>
+                <p class="question-subtitle">Le 14 février 2026</p>
+                
+                <div class="buttons-container">
+                    <button id="btn-yes" onclick="handleYes()" class="btn-yes">OUI 💕</button>
+                    <button id="btn-no" class="btn-no">Non</button>
+                </div>
+                
+                <p id="escape-message" class="escape-message"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ÉTAPE 6: Message Final + Compte à Rebours -->
+    <div id="step-final" class="step">
+        <div class="fireworks"></div>
+        <div class="container">
+            <div class="final-message">
+                <h2 class="celebration-title">OUI ! 🎉</h2>
+                
+                <div class="love-letter">
+                    <p class="love-text">Ma 224, mon amour,</p>
+                    
+                    <p class="love-text">
+                        Depuis ce 16 novembre 2024 où je t'ai vue pour la première fois, ma vie a changé. 
+                        Chaque jour passé à distance, chaque message, chaque appel, chaque "je t'aime" murmure 
+                        à travers les écrans... tout ça n'a fait que renforcer la certitude que tu es LA personne 
+                        avec qui je veux passer le reste de ma vie.
+                    </p>
+                    
+                    <p class="love-text">
+                        Tu es ma lumière dans les moments sombres, mon rire dans la solitude, ma force quand je doute. 
+                        Malgré les kilomètres qui nous séparent, ton cœur bat tout près du mien. Tu es mon chez-moi, 
+                        peu importe où je me trouve.
+                    </p>
+                    
+                    <p class="love-text">
+                        Je compte les jours, les heures, les minutes jusqu'à ce que tu deviennes officiellement ma femme. 
+                        Jusqu'à ce que je puisse te tenir la main devant tous ceux qu'on aime et dire "c'est elle, 
+                        c'est mon épouse, c'est l'amour de ma vie".
+                    </p>
+                    
+                    <p class="love-text">
+                        Le 30 juillet 2026 ne sera pas juste un jour de plus. Ce sera le début de notre pour toujours. 
+                        Ce sera le jour où tous nos rêves deviennent réalité. Ce sera le plus beau jour de ma vie 
+                        parce que je le passerai à t'épouser, toi, ma 224, mon âme sœur, mon tout.
+                    </p>
+                    
+                    <p class="love-text">
+                        Je t'aime plus que les mots ne pourront jamais le dire. Tu es ma Valentine, aujourd'hui et pour toujours.
+                    </p>
+                    
+                    <p class="love-signature">Ton futur mari, pour l'éternité 💍</p>
+                </div>
+
+                <div class="countdown-section">
+                    <h3 class="countdown-title">Plus que...</h3>
+                    <div id="countdown" class="countdown"></div>
+                    <p class="countdown-subtitle">Jusqu'à notre mariage 💒</p>
+                </div>
+
+                <div class="final-hearts">
+                    <span>💕</span><span>💖</span><span>💗</span><span>💝</span><span>💕</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
